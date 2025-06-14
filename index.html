@@ -36,11 +36,28 @@
         <div class="navbar-logo"><h4>PORTF.</h4></div>
         <div class="navbar-items">
           <ul class="flex gap-[clamp(1rem,4vw,4rem)]">
-            <li><a href=""><h6>Portfolio</h6></a></li>
-            <li><a href=""><h6>Blog</h6></a></li>
+            <li class="relative hover:text-white">
+              <a href="#"
+                ><h6 class="text-[clamp(1rem,1.6vw,1.78rem)] transition-all hover:-translate-y-0.5">Portfolio</h6></a
+              >
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-1 bg-white rounded-t-md"></div>
+            </li>
+            <li>
+              <span href=""
+                ><h6 class="text-[clamp(1rem,1.6vw,1.78rem)] opacity-60 cursor-crosshair hover:opacity-75 transition-all hover:-translate-y-0.5">Blog</h6></span
+              >
+            </li>
           </ul>
         </div>
-        <div class="navbar-btn-section"><a href=""><h6 class="italic font-bold pl-2.5 sm:pl-3.5 md:pl-5 lg:pl-8 xl:pl-24 pr-2 bg-gradient-to-r from-[#3C2A4D] to-[#E0F0EA] text-left text-[#2B2A28]">RESUME</h6></a></div>
+        <div class="navbar-btn-section flex items-center">
+          <a href=""
+            ><h6
+              class="italic font-bold pl-3 sm:pl-4 md:pl-6 lg:pl-8 xl:pl-24 pr-2 bg-gradient-to-r from-[#3C2A4D] to-[#E0F0EA] text-left text-[#2B2A28] text-[clamp(1.4rem,1.8vw,1.78rem)] !leading-tight hover:text-white hover:pr-4 hover:tracking-wider transition-all duration-300"
+            >
+              RESUME
+            </h6></a
+          >
+        </div>
       </div>
     </div>
     <script type="module" src="script.js"></script>

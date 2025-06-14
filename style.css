@@ -47,7 +47,6 @@ h5 {
 }
 h6 {
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(1rem, 1.8vw + 0.3rem, 1.78rem);
   line-height: 62px;
 }
 
