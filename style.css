@@ -55,7 +55,7 @@ p {
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
-  font-size: clamp(1rem, 1.3vw, 1.3125rem);;
+  font-size: clamp(1.1rem, 1.3vw, 1.3125rem);;
   text-align: center;
   opacity: 75%;
   color: #2A2B28;
