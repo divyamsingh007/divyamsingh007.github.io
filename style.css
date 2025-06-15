@@ -59,4 +59,5 @@ p {
   text-align: center;
   opacity: 75%;
   color: #2A2B28;
+  margin-top: clamp(14px, 1.2vw, 16px);
 }
