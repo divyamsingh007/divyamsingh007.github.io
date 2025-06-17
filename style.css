@@ -55,9 +55,63 @@ p {
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
-  font-size: clamp(1.1rem, 1.3vw, 1.3125rem);;
+  font-size: clamp(1.1rem, 1.3vw, 1.3125rem);
   text-align: center;
   opacity: 75%;
-  color: #2A2B28;
+  color: #2a2b28;
   margin-top: clamp(14px, 1.2vw, 16px);
+}
+
+
+.social-media a {
+  display: flex;
+  background: #E0F0EA;
+  height: 50px;
+  width: 50px;
+  margin: 0 10px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0);
+  transition: transform 0.5s;
+}
+
+.social-media a i {
+  font-size: 25px;
+  color: #777;
+  transition: transform 0.5s;
+}
+
+.social-media a:hover {
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.01);
+  transform: translateY(2px);
+}
+
+.social-media a:hover i {
+  transform: scale(0.9);
+}
+
+.social-media a:hover .fa-facebook {
+  color: #3b5998;
+}
+
+.social-media a:hover .fa-twitter {
+  color: #00acee;
+}
+
+.social-media a:hover .fa-github {
+  color: #000000;
+}
+
+.social-media a:hover .fa-instagram {
+  color: #f14843;
+}
+
+.social-media a:hover .fa-linkedin-in {
+  color: #3b5998;
 }
