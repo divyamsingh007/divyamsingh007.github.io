@@ -29,6 +29,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    <script
+      src="https://kit.fontawesome.com/688c0604e6.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Internal Linkings -->
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
@@ -38,7 +42,13 @@
       <nav
         class="bg-[#3C2A4D] border-b border-gray-200 text-[#E0F0EA] flex justify-between px-6 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-[9rem] py-2 sm:py-3 md:py-4 lg:py-[1rem]"
       >
-        <div class="navbar-logo"><h4>PORTF.</h4></div>
+        <div class="navbar-logo relative inline-block">
+          <h4
+            class="text-2xl font-extrabold bg-gradient-to-r from-[#E0F0EA] via-gray-300 to-white bg-[length:200%_auto] bg-clip-text text-transparent animate-shine"
+          >
+            PORTF.
+          </h4>
+        </div>
         <div class="navbar-items hidden sm:block">
           <ul class="flex gap-[clamp(1rem,4vw,4rem)]">
             <li class="relative hover:text-white">
@@ -65,13 +75,22 @@
           </ul>
         </div>
         <div class="navbar-btn-section flex items-center">
-          <a href="Assets/DivyamSinghDuhoonResume.pdf" target="_blank"
-            ><h6
+          <a
+            href="Assets/DivyamSinghDuhoonResume.pdf"
+            target="_blank"
+            class="group"
+          >
+            <h6
               class="italic font-bold pl-6 sm:pl-6 md:pl-10 lg:pl-12 xl:pl-24 pr-2 bg-gradient-to-r from-[#3C2A4D] to-[#E0F0EA] text-left text-[#2B2A28] text-[clamp(1.5rem,1.8vw,1.78rem)] !leading-tight hover:text-white hover:pr-4 hover:tracking-wider transition-all duration-300"
             >
               RESUME
-            </h6></a
-          >
+              <span
+                class="inline-block opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ml-1"
+              >
+                <i class="fa-solid fa-arrow-right fa-beat"></i>
+              </span>
+            </h6>
+          </a>
         </div>
       </nav>
       <div
@@ -121,9 +140,18 @@
                 <a
                   href="https://www.linkedin.com/in/divyam-singh-duhoon/"
                   target="_blank"
-                  class="hover:opacity-50 font-mono relative text-black after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-gray-700 after:transition-all after:duration-300 hover:after:w-full pl-4"
+                  class="hover:opacity-50 font-mono relative text-black after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-gray-700 after:transition-all after:duration-300 hover:after:w-full px-4"
                   >LinkedIn</a
                 >
+                /
+                <a
+                  href="Assets/DivyamSinghDuhoonResume.pdf"
+                  download
+                  class="hover:opacity-50 font-mono relative text-black after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-gray-700 after:transition-all after:duration-300 hover:after:w-full pl-4"
+                  >Resume<i
+                    class="fa-solid fa-arrow-up-from-bracket ml-2 fa-xs"
+                  ></i
+                ></a>
               </p>
               <button class="cursor-pointer" onclick="scrollToAbout()">
                 <h6
@@ -134,7 +162,7 @@
               </button>
             </div>
             <div
-              class="img-area xl:-top-48 left-32 scale-100 md:scale-110 lg:scale-[2] hidden xl:block xl:relative"
+              class="img-area xl:-top-40 left-32 scale-100 md:scale-110 lg:scale-[2] hidden xl:block xl:relative"
             >
               <img
                 src="Assets/cutout-01-better_HERO.png"
@@ -202,48 +230,48 @@
           </p>
         </div>
         <div class="core-skill-area">
-          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mt-8">
             <li
-              class="bg-[#E0F0EA] text-[#3C2A4D] font-semibold rounded-full shadow-md shadow-[#E0F0EA] w-full h-fit px-4 sm:px-6 md:px-8 lg:px-16"
+              class="bg-[#E0F0EA] text-[#3C2A4D] font-semibold rounded-full shadow-sm shadow-[#E0F0EA] w-full h-fit px-4 sm:px-6 md:px-8 lg:px-16 transition-transform duration-300 hover:-translate-y-1"
             >
               <h5
-                class="!font-semibold !italic !text-left break-words text-sm sm:text-base !leading-loose"
+                class="!font-semibold !italic sm:!text-left break-words text-sm sm:text-base !leading-loose"
               >
                 • HTML5 & CSS3
               </h5>
             </li>
             <li
-              class="bg-[#E0F0EA] text-[#3C2A4D] font-semibold rounded-full shadow-md shadow-[#E0F0EA] w-full h-fit px-4 sm:px-6 md:px-8 lg:px-16"
+              class="bg-[#E0F0EA] text-[#3C2A4D] font-semibold rounded-full shadow-sm shadow-[#E0F0EA] w-full h-fit px-4 sm:px-6 md:px-8 lg:px-16 transition-transform duration-300 hover:-translate-y-1"
             >
               <h5
-                class="!font-semibold !italic !text-left break-words text-sm sm:text-base !leading-loose"
+                class="!font-semibold !italic sm:!text-left break-words text-sm sm:text-base !leading-loose"
               >
                 • JavaScript
               </h5>
             </li>
             <li
-              class="bg-[#E0F0EA] text-[#3C2A4D] font-semibold rounded-full shadow-md shadow-[#E0F0EA] w-full h-fit px-4 sm:px-6 md:px-8 lg:px-16"
+              class="bg-[#E0F0EA] text-[#3C2A4D] font-semibold rounded-full shadow-sm shadow-[#E0F0EA] w-full h-fit px-4 sm:px-6 md:px-8 lg:px-16 transition-transform duration-300 hover:-translate-y-1"
             >
               <h5
-                class="!font-semibold !italic !text-left break-words text-sm sm:text-base !leading-loose"
+                class="!font-semibold !italic sm:!text-left break-words text-sm sm:text-base !leading-loose"
               >
-                • Bootstrap & Tailwind
+                • Tailwind CSS
               </h5>
             </li>
             <li
-              class="bg-[#E0F0EA] text-[#3C2A4D] font-semibold rounded-full shadow-md shadow-[#E0F0EA] w-full h-fit px-4 sm:px-6 md:px-8 lg:px-16"
+              class="bg-[#E0F0EA] text-[#3C2A4D] font-semibold rounded-full shadow-sm shadow-[#E0F0EA] w-full h-fit px-4 sm:px-6 md:px-8 lg:px-16 transition-transform duration-300 hover:-translate-y-1"
             >
               <h5
-                class="!font-semibold !italic !text-left break-words text-sm sm:text-base !leading-loose"
+                class="!font-semibold !italic sm:!text-left break-words text-sm sm:text-base !leading-loose"
               >
                 • React JS
               </h5>
             </li>
             <li
-              class="bg-[#E0F0EA] text-[#3C2A4D] font-semibold rounded-full shadow-md shadow-[#E0F0EA] w-full h-fit px-4 sm:px-6 md:px-8 lg:px-16"
+              class="bg-[#E0F0EA] text-[#3C2A4D] font-semibold rounded-full shadow-sm shadow-[#E0F0EA] w-full h-fit px-4 sm:px-6 md:px-8 lg:px-16 transition-transform duration-300 hover:-translate-y-1"
             >
               <h5
-                class="!font-semibold !italic !text-left break-words text-sm sm:text-base !leading-loose"
+                class="!font-semibold !italic sm:!text-left break-words text-sm sm:text-base !leading-loose"
               >
                 • Git & Github
               </h5>
@@ -377,7 +405,15 @@
             © 2025 Divyam Singh. All rights reserved.
           </h5>
         </div>
-        <div><a href="#hero-section-id" class="hover:text-white">Back to top</a></div>
+        <div class="hidden justify-center sm:flex">
+          <a
+            href="#hero-section-id"
+            class="text-gray-300 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-105 flex items-center gap-x-2"
+          >
+            Back to top
+            <i class="fa-solid fa-arrow-up"></i>
+          </a>
+        </div>
       </div>
     </div>
     <script type="module" src="script.js"></script>

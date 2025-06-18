@@ -66,7 +66,6 @@ p {
   margin-top: clamp(14px, 1.2vw, 16px);
 }
 
-
 .social-media a {
   display: flex;
   background: #E0F0EA;
@@ -119,3 +118,4 @@ p {
 .social-media a:hover .fa-linkedin-in {
   color: #3b5998;
 }
+
