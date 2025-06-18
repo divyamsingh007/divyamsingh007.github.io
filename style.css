@@ -119,10 +119,6 @@ p {
   color: #3b5998;
 }
 
-body {
-  /* cursor: none; */
-}
-
 /* Cursor Dot */
 .cursor {
   position: fixed;
@@ -138,7 +134,7 @@ body {
 }
 
 /* Trail Effect */
-.trail {
+/* .trail {
   position: fixed;
   width: 16px;
   height: 16px;
@@ -155,4 +151,4 @@ body {
     opacity: 0;
     transform: scale(0.5);
   }
-}
+} */

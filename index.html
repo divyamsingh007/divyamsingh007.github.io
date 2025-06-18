@@ -38,6 +38,66 @@
     <script src="script.js"></script>
   </head>
   <body class="">
+    <div
+      class="in-page-nav fixed z-50 bg-[#574F7D] rounded-full hidden w-[clamp(60px,6vw,72px)] h-[498px] sm:top-[196px] sm:left-[96px] md:top-[200px] md:left-[30px] lg:top-[208px] lg:left-[60px] xl:top-[196px] xl:left-[108px] md:flex flex-col items-center justify-evenly text-[#E0F0EA] text-xl"
+    >
+      <a
+        href="#hero-section-id"
+        class="nav-link group relative hover:text-white hover:scale-125 transition-all duration-300 w-14 h-14 rounded-full flex items-center justify-center"
+      >
+        <i class="fa-solid fa-house fa-xl"></i>
+        <span
+          class="absolute left-full ml-3 top-1/2 -translate-y-1/2 whitespace-nowrap bg-[#2B2A28] text-white text-sm px-3 py-1 opacity-0 group-hover:opacity-100 transition-all duration-300"
+        >
+          <h6 class="!leading-tight">Home</h6>
+        </span>
+      </a>
+      <a
+        href="#about-me-section-id"
+        class="nav-link group relative hover:text-white hover:scale-125 transition-all duration-300 w-14 h-14 rounded-full flex items-center justify-center"
+      >
+        <i class="fa-solid fa-user fa-xl"></i>
+        <span
+          class="absolute left-full ml-3 top-1/2 -translate-y-1/2 whitespace-nowrap bg-[#2B2A28] text-white text-sm px-3 py-1 opacity-0 group-hover:opacity-100 transition-all duration-300"
+        >
+          <h6 class="!leading-tight">About</h6>
+        </span>
+      </a>
+      <a
+        href="#skills-section-id"
+        class="nav-link group relative hover:text-white hover:scale-125 transition-all duration-300 w-14 h-14 rounded-full flex items-center justify-center"
+      >
+        <i class="fa-solid fa-brain fa-xl"></i>
+        <span
+          class="absolute left-full ml-3 top-1/2 -translate-y-1/2 whitespace-nowrap bg-[#2B2A28] text-white text-sm px-3 py-1 opacity-0 group-hover:opacity-100 transition-all duration-300"
+        >
+          <h6 class="!leading-tight">Skills</h6>
+        </span>
+      </a>
+      <a
+        href="#project-section-id"
+        class="nav-link group relative hover:text-white hover:scale-125 transition-all duration-300 w-14 h-14 rounded-full flex items-center justify-center"
+      >
+        <i class="fa-solid fa-laptop-code fa-xl"></i>
+        <span
+          class="absolute left-full ml-3 top-1/2 -translate-y-1/2 whitespace-nowrap bg-[#2B2A28] text-white text-sm px-3 py-1 opacity-0 group-hover:opacity-100 transition-all duration-300"
+        >
+          <h6 class="!leading-tight">Projects</h6>
+        </span>
+      </a>
+      <a
+        href="#footer-section-id"
+        class="nav-link group relative hover:text-white hover:scale-125 transition-all duration-300 w-14 h-14 rounded-full flex items-center justify-center"
+      >
+        <i class="fa-solid fa-envelope fa-xl"></i>
+        <span
+          class="absolute left-full ml-3 top-1/2 -translate-y-1/2 whitespace-nowrap bg-[#2B2A28] text-white text-sm px-3 py-1 opacity-0 group-hover:opacity-100 transition-all duration-300"
+        >
+          <h6 class="!leading-tight">Contacts</h6>
+        </span>
+      </a>
+    </div>
+
     <div class="hero-section" id="hero-section-id">
       <nav
         class="bg-[#3C2A4D] border-b border-gray-200 text-[#E0F0EA] flex justify-between px-6 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-[9rem] py-2 sm:py-3 md:py-4 lg:py-[1rem]"
@@ -544,6 +604,38 @@
         setTimeout(() => {
           trail.remove();
         }, 500);
+      });
+    </script>
+    <script>
+      const sections = [
+        "hero-section-id",
+        "about-me-section-id",
+        "skills-section-id",
+        "project-section-id",
+        "footer-section-id",
+      ];
+
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((id) => {
+          const section = document.getElementById(id);
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          if (scrollY >= sectionTop - sectionHeight / 3) {
+            current = id;
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("bg-white");
+          link.classList.remove("text-[#3C2A4D]");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("bg-white");
+            link.classList.add("text-[#3C2A4D]");
+          }
+        });
       });
     </script>
   </body>
