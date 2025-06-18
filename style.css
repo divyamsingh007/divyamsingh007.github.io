@@ -103,8 +103,8 @@ p {
   color: #3b5998;
 }
 
-.social-media a:hover .fa-twitter {
-  color: #00acee;
+.social-media a:hover .fa-x-twitter {
+  color: #000000;
 }
 
 .social-media a:hover .fa-github {
@@ -117,6 +117,9 @@ p {
 
 .social-media a:hover .fa-linkedin-in {
   color: #3b5998;
+}
+.social-media a:hover .fa-envelope {
+  color: #CC3A2E;
 }
 
 /* Cursor Dot */
