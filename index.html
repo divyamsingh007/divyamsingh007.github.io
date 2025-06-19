@@ -39,7 +39,7 @@
   </head>
   <body class="">
     <div
-      class="in-page-nav fixed z-50 bg-[#574F7D] rounded-full hidden w-[clamp(60px,6vw,72px)] h-[498px] sm:top-[196px] sm:left-[96px] md:top-[200px] md:left-[30px] lg:top-[208px] lg:left-[60px] xl:top-[196px] xl:left-[108px] md:flex flex-col items-center justify-evenly text-[#E0F0EA] text-xl"
+      class="in-page-nav fixed z-50 bg-[#574F7D] hidden w-[clamp(60px,6vw,72px)] h-[498px] sm:top-[196px] sm:left-[96px] md:top-[200px] md:left-[30px] lg:top-[208px] lg:left-[60px] xl:top-[196px] xl:left-[108px] md:flex flex-col items-center justify-evenly text-[#E0F0EA] text-xl"
     >
       <a
         href="#hero-section-id"
@@ -525,25 +525,33 @@
       <section
         class="w-full bg-[#3C2A4D] px-6 md:px-10 lg:px-20 py-16 space-y-32 mt-16"
       >
-        <div class="project-container my-36">
+        <div class="project-container my-8">
           <!-- Project Block -->
-          <div
-            class="relative max-w-6xl mx-auto flex flex-col md:flex-row md:items-center"
-          >
+          <div class="relative sm:flex items-center">
             <!-- Image -->
-            <div class="w-full md:w-[60%]">
+            <div
+              class="w-full z-0 group relative overflow-hidden sm:rounded-xl shadow-2xl"
+            >
+              <!-- Default Image (blurs on hover) -->
               <img
-                src="Assets/Trex_Backcover.png"
+                src="Assets/btg-hover.png"
                 alt="Project Image"
-                class="w-full rounded-xl shadow-2xl"
+                class="w-full transition duration-700 ease-in-out transform group-hover:scale-105 group-hover:blur-sm"
+              />
+
+              <!-- Hover Image (sharp, no blur) -->
+              <img
+                src="Assets/btg-backcover.jpg"
+                alt="Project Image Hover"
+                class="w-full absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out"
               />
             </div>
 
-            <!-- Info Box - constrained INSIDE container -->
+            <!-- Info Box - relative, overlapping image -->
             <div
-              class="absolute right-0 md:translate-x-0 md:right-6 lg:right-10 top-1/2 -translate-y-1/2 w-full md:w-[45%] z-10 mt-8 md:mt-0"
+              class="relative w-[100%] z-10 -ml-[0%] sm:-ml-[70%] md:-ml-[60%] lg:-ml-[50%] xl:-ml-[40%]"
             >
-              <div class="bg-[#E0F0EA] rounded-xl shadow-2xl p-6 md:p-8">
+              <div class="bg-[#E0F0EA] sm:rounded-xl shadow-2xl p-6 md:p-8">
                 <h3
                   class="text-2xl font-bold text-[#2B2A28] mb-2 !text-left !leading-none"
                 >
@@ -566,7 +574,7 @@
                   >
                 </h4>
                 <h6
-                  class="!text-sm !text-gray-700 !leading-relaxed mb-6 !opacity-100"
+                  class="!text-sm !text-gray-700 !leading-relaxed my-16 !opacity-100 max-h-[300px] overflow-y-scroll sm:overflow-y-clip"
                 >
                   Bridge the Gap is a real-time sign language to speech
                   translator designed to empower individuals with hearing
@@ -583,21 +591,394 @@
                   translation, Bridge the Gap is more than a tool — it’s a leap
                   toward a more empathetic and connected world.
                 </h6>
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <button class="cursor-pointer">
-                    <h6
-                      class="italic font-bold pl-6 sm:pl-6 md:pl-10 lg:pl-12 xl:pl-24 pr-2 bg-gradient-to-r from-[#3C2A4D] to-[#574F7D] text-left text-[#E0F0EA] text-[clamp(1.5rem,1.8vw,1.78rem)] !leading-tight hover:text-white hover:pr-4 hover:tracking-wider transition-all duration-300"
+                    <a
+                      href="https://github.com/divyamsingh007/BridgeTheGap"
+                      target="_blank"
                     >
-                      Repo
-                    </h6>
+                      <h6
+                        class="italic font-bold pl-6 sm:pl-6 md:pl-10 lg:pl-12 xl:pl-24 pr-2 bg-gradient-to-r from-[#3C2A4D] to-[#574F7D] sm:text-left text-[#E0F0EA] text-[clamp(1.5rem,1.8vw,1.78rem)] !leading-tight hover:text-white hover:pr-4 hover:tracking-wider transition-all duration-300"
+                      >
+                        Repository<i class="fas fa-code-branch fa-2xs mx-4"></i>
+                      </h6>
+                    </a>
                   </button>
-                  <button class="cursor-pointer flex align-middle items-center justify-center">
+                  <button
+                    class="cursor-not-allowed opacity-75 flex align-middle items-center justify-center bg-gradient-to-r from-black to-white !text-black"
+                  >
                     <h6
-                      class="italic font-bold pl-6 sm:pl-6 md:pl-10 lg:pl-12 xl:pl-24 pr-2 bg-gradient-to-r from-[#3C2A4D] to-[#574F7D] text-left text-[#E0F0EA] text-[clamp(1.5rem,1.8vw,1.78rem)] !leading-tight hover:text-white hover:pr-2 hover:tracking-wider transition-all duration-300"
+                      class="italic font-bold pl-6 sm:pl-6 md:pl-10 lg:pl-12 xl:pl-24 pr-2 sm:text-left !text-black text-[clamp(1.5rem,1.8vw,1.78rem)] !leading-tight transition-all duration-300"
                     >
                       Live
                       <i class="fa-solid fa-up-right-from-square fa-2xs"></i>
                     </h6>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-container my-8">
+          <!-- Project Block -->
+          <div class="relative sm:flex items-center">
+            <!-- Image -->
+            <div
+              class="w-full z-0 group relative overflow-hidden sm:rounded-xl shadow-2xl"
+            >
+              <!-- Default Image (blurs on hover) -->
+              <img
+                src="Assets/Current-Portfolio_Backcover.avif"
+                alt="Project Image"
+                class="w-full transition duration-700 ease-in-out transform group-hover:scale-105 group-hover:blur-sm"
+              />
+
+              <!-- Hover Image (sharp, no blur) -->
+              <img
+                src="Assets/Current-Portfolio_Backcover2.avif"
+                alt="Project Image Hover"
+                class="w-full absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out"
+                style="transform: scaleX(-1)"
+              />
+            </div>
+
+            <!-- Info Box - relative, overlapping image -->
+            <div
+              class="relative w-[100%] z-10 -ml-[0%] sm:-ml-[70%] md:-ml-[60%] lg:-ml-[50%] xl:-ml-[40%]"
+            >
+              <div class="bg-[#E0F0EA] sm:rounded-xl shadow-2xl p-6 md:p-8">
+                <h3
+                  class="text-2xl font-bold text-[#2B2A28] mb-2 !text-left !leading-none"
+                >
+                  Portfolio V2
+                </h3>
+                <h5
+                  class="!text-left !leading-none -mt-4 ml-2 !font-normal !italic"
+                >
+                  #Built to represent who I am. And who I’m becoming.
+                </h5>
+                <h5 class="!font-normal !text-[1.3rem] opacity-75">
+                  [ Jun 2025 ]
+                </h5>
+                <h4
+                  class="!text-lg !font-normal !text-[#000000] my-4 !text-left"
+                >
+                  <span class="!font-semibold">Tech Stack:</span><br />
+                  <span class="underline"
+                    >HTML, CSS, Tailwind CSS, JavaScript, Figma</span
+                  >
+                </h4>
+                <h6
+                  class="!text-sm !text-gray-700 !leading-relaxed my-16 !opacity-100 max-h-[300px] overflow-y-scroll sm:overflow-y-clip"
+                >
+                  I built this second version of my portfolio to better reflect
+                  my evolving skills, design sense, and passion for development.
+                  It’s a refined space where clean UI meets thoughtful
+                  interactivity — showcasing not just what I can do, but how far
+                  I’ve come. From responsive layouts to smooth transitions,
+                  every element is crafted with intent and dedication. This
+                  portfolio stands as a personal milestone — a step toward
+                  building more impactful, user-focused projects in the future,
+                  while marking real progress in my creative and professional
+                  journey.
+                </h6>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <button class="cursor-pointer">
+                    <a
+                      href="https://github.com/divyamsingh007/Portfolio_02"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><h6
+                        class="italic font-bold pl-6 sm:pl-6 md:pl-10 lg:pl-12 xl:pl-24 pr-2 bg-gradient-to-r from-[#3C2A4D] to-[#574F7D] sm:text-left text-[#E0F0EA] text-[clamp(1.5rem,1.8vw,1.78rem)] !leading-tight hover:text-white hover:pr-4 hover:tracking-wider transition-all duration-300"
+                      >
+                        Repository<i
+                          class="fas fa-code-branch fa-2xs mx-4"
+                        ></i></h6
+                    ></a>
+                  </button>
+                  <button class="cursor-pointer">
+                    <a
+                      href="https://divyamsingh007.github.io/Portfolio_02/"
+                      target="_blank"
+                      ><h6
+                        class="italic font-bold pl-6 sm:pl-6 md:pl-10 lg:pl-12 xl:pl-24 bg-gradient-to-r from-[#3C2A4D] to-[#574F7D] sm:!text-left text-[#E0F0EA] text-[clamp(1.5rem,1.8vw,1.78rem)] !leading-tight hover:text-white hover:pr-4 hover:tracking-wider transition-all duration-300"
+                      >
+                        Live<i
+                          class="fa-solid fa-up-right-from-square fa-2xs mx-4"
+                        ></i></h6
+                    ></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-container my-8">
+          <!-- Project Block -->
+          <div class="relative sm:flex items-center">
+            <!-- Image -->
+            <div
+              class="w-full z-0 group relative overflow-hidden sm:rounded-xl shadow-2xl"
+            >
+              <!-- Default Image (blurs on hover) -->
+              <img
+                src="Assets/snake-ss.png"
+                alt="Project Image"
+                class="w-full transition duration-700 ease-in-out transform group-hover:scale-105 group-hover:blur-sm"
+              />
+
+              <!-- Hover Image (sharp, no blur) -->
+              <img
+                src="Assets/snake-ss2.png"
+                alt="Project Image Hover"
+                class="w-full absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out"
+              />
+            </div>
+
+            <!-- Info Box - relative, overlapping image -->
+            <div
+              class="relative w-[100%] z-10 -ml-[0%] sm:-ml-[70%] md:-ml-[60%] lg:-ml-[50%] xl:-ml-[40%]"
+            >
+              <div class="bg-[#E0F0EA] sm:rounded-xl shadow-2xl p-6 md:p-8">
+                <h3
+                  class="text-2xl font-bold text-[#2B2A28] mb-2 !text-left !leading-none"
+                >
+                  Snake&Snack Game
+                </h3>
+                <h5
+                  class="!text-left !leading-none -mt-4 ml-2 !font-normal !italic"
+                >
+                  #Just a snake, some snacks, and the spark that started it all.
+                </h5>
+                <h5 class="!font-normal !text-[1.3rem] opacity-75">
+                  [ Feb 2025 ]
+                </h5>
+                <h4
+                  class="!text-lg !font-normal !text-[#000000] my-4 !text-left"
+                >
+                  <span class="!font-semibold">Tech Stack:</span><br />
+                  <span class="underline">Python, OOPS</span>
+                </h4>
+                <h6
+                  class="!text-sm !text-gray-700 !leading-relaxed my-16 !opacity-100 max-h-[300px] overflow-y-scroll sm:overflow-y-clip"
+                >
+                  This project was my introduction to Object-Oriented
+                  Programming in Python, developed through a classic Snake game.
+                  While following a tutorial, I went beyond just writing code —
+                  I focused on understanding the core principles of OOP, game
+                  logic, and structuring code efficiently. Building this game
+                  became a fun and interactive way to advance my Python skills,
+                  and it played a key role in developing my logical thinking.
+                  More importantly, it sparked my interest in backend
+                  development and made me realize how powerful and versatile
+                  Python can be. This project stands as an early but important
+                  step toward my long-term goal of becoming a backend developer
+                  in Python.
+                </h6>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <button class="cursor-pointer">
+                    <a
+                      href="https://github.com/divyamsingh007/Snake-Snack_PyGame"
+                      target="_blank"
+                      ><h6
+                        class="italic font-bold pl-6 sm:pl-6 md:pl-10 lg:pl-12 xl:pl-24 pr-2 bg-gradient-to-r from-[#3C2A4D] to-[#574F7D] sm:text-left text-[#E0F0EA] text-[clamp(1.5rem,1.8vw,1.78rem)] !leading-tight hover:text-white hover:pr-4 hover:tracking-wider transition-all duration-300"
+                      >
+                        Repository<i
+                          class="fas fa-code-branch fa-2xs mx-4"
+                        ></i></h6
+                    ></a>
+                  </button>
+                  <button
+                    class="cursor-not-allowed opacity-75 flex align-middle items-center justify-center bg-gradient-to-r from-black to-white !text-black"
+                  >
+                    <h6
+                      class="italic font-bold pl-6 sm:pl-6 md:pl-10 lg:pl-12 xl:pl-24 pr-2 sm:text-left !text-black text-[clamp(1.5rem,1.8vw,1.78rem)] !leading-tight transition-all duration-300"
+                    >
+                      Live
+                      <i class="fa-solid fa-up-right-from-square fa-2xs"></i>
+                    </h6>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-container my-8">
+          <!-- Project Block -->
+          <div class="relative sm:flex items-center">
+            <!-- Image -->
+            <div
+              class="w-full z-0 group relative overflow-hidden sm:rounded-xl shadow-2xl"
+            >
+              <!-- Default Image (blurs on hover) -->
+              <img
+                src="Assets/mario-ss2.png"
+                alt="Project Image"
+                class="w-full transition duration-700 ease-in-out transform group-hover:scale-105 group-hover:blur-sm"
+              />
+
+              <!-- Hover Image (sharp, no blur) -->
+              <img
+                src="Assets/mario-ss.png"
+                alt="Project Image Hover"
+                class="w-full absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out"
+              />
+            </div>
+
+            <!-- Info Box - relative, overlapping image -->
+            <div
+              class="relative w-[100%] z-10 -ml-[0%] sm:-ml-[70%] md:-ml-[60%] lg:-ml-[50%] xl:-ml-[40%]"
+            >
+              <div class="bg-[#E0F0EA] sm:rounded-xl shadow-2xl p-6 md:p-8">
+                <h3
+                  class="text-2xl font-bold text-[#2B2A28] mb-2 !text-left !leading-none"
+                >
+                  Super Mario Game
+                </h3>
+                <h5
+                  class="!text-left !leading-none -mt-4 ml-2 !font-normal !italic"
+                >
+                  #Jump, run, code — my journey into JS begins.
+                </h5>
+                <h5 class="!font-normal !text-[1.3rem] opacity-75">
+                  [ Jan 2025 ]
+                </h5>
+                <h4
+                  class="!text-lg !font-normal !text-[#000000] my-4 !text-left"
+                >
+                  <span class="!font-semibold">Tech Stack:</span><br />
+                  <span class="underline">JavaScript</span>
+                </h4>
+                <h6
+                  class="!text-sm !text-gray-700 !leading-relaxed my-16 !opacity-100 max-h-[300px] overflow-y-scroll sm:overflow-y-clip"
+                >
+                  This Super Mario game was created using pure JavaScript as a
+                  practice project to build my confidence and hands-on
+                  experience with core frontend concepts. Through this project,
+                  I explored the fundamentals of the DOM, event listeners,
+                  functions, conditional logic, and real-time interactivity. It
+                  wasn’t just about recreating a nostalgic game — it was about
+                  understanding how JavaScript powers dynamic behavior in
+                  websites. This project played a major role in solidifying my
+                  understanding of scripting and gave me the practical edge I
+                  needed to advance further in frontend development.
+                </h6>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <button class="cursor-pointer">
+                    <a
+                      href="https://github.com/divyamsingh007/Super_Mario"
+                      target="_blank"
+                      ><h6
+                        class="italic font-bold pl-6 sm:pl-6 md:pl-10 lg:pl-12 xl:pl-24 pr-2 bg-gradient-to-r from-[#3C2A4D] to-[#574F7D] sm:text-left text-[#E0F0EA] text-[clamp(1.5rem,1.8vw,1.78rem)] !leading-tight hover:text-white hover:pr-4 hover:tracking-wider transition-all duration-300"
+                      >
+                        Repository<i
+                          class="fas fa-code-branch fa-2xs mx-4"
+                        ></i></h6
+                    ></a>
+                  </button>
+                  <button class="cursor-pointer">
+                    <a
+                      href="https://divyamsingh007.github.io/Super_Mario/"
+                      target="_blank"
+                      ><h6
+                        class="italic font-bold pl-6 sm:pl-6 md:pl-10 lg:pl-12 xl:pl-24 bg-gradient-to-r from-[#3C2A4D] to-[#574F7D] sm:!text-left text-[#E0F0EA] text-[clamp(1.5rem,1.8vw,1.78rem)] !leading-tight hover:text-white hover:pr-4 hover:tracking-wider transition-all duration-300"
+                      >
+                        Live<i
+                          class="fa-solid fa-up-right-from-square fa-2xs mx-4"
+                        ></i></h6
+                    ></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-container my-8">
+          <!-- Project Block -->
+          <div class="relative sm:flex items-center">
+            <!-- Image -->
+            <div
+              class="w-full z-0 group relative overflow-hidden sm:rounded-xl shadow-2xl"
+            >
+              <!-- Default Image (blurs on hover) -->
+              <img
+                src="Assets/pv1-ss.png"
+                alt="Project Image"
+                class="w-full transition duration-700 ease-in-out transform group-hover:scale-105 group-hover:blur-sm"
+              />
+
+              <!-- Hover Image (sharp, no blur) -->
+              <img
+                src="Assets/Previous-Portfolio_Backcover.jpg"
+                alt="Project Image Hover"
+                class="w-full absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out"
+                style="transform: scaleX(-1)"
+              />
+            </div>
+
+            <!-- Info Box - relative, overlapping image -->
+            <div
+              class="relative w-[100%] z-10 -ml-[0%] sm:-ml-[70%] md:-ml-[60%] lg:-ml-[50%] xl:-ml-[40%]"
+            >
+              <div class="bg-[#E0F0EA] sm:rounded-xl shadow-2xl p-6 md:p-8">
+                <h3
+                  class="text-2xl font-bold text-[#2B2A28] mb-2 !text-left !leading-none"
+                >
+                  Portfolio V1
+                </h3>
+                <h5
+                  class="!text-left !leading-none -mt-4 ml-2 !font-normal !italic"
+                >
+                  #The start of something bold.
+                </h5>
+                <h5 class="!font-normal !text-[1.3rem] opacity-75">
+                  [ Dec 2024 - Jan 2025 ]
+                </h5>
+                <h4
+                  class="!text-lg !font-normal !text-[#000000] my-4 !text-left"
+                >
+                  <span class="!font-semibold">Tech Stack:</span><br />
+                  <span class="underline">HTML, CSS</span>
+                </h4>
+                <h6
+                  class="!text-sm !text-gray-700 !leading-relaxed my-16 !opacity-100 max-h-[300px] overflow-y-scroll sm:overflow-y-clip"
+                >
+                  My very first attempt at building a personal website — crafted
+                  entirely with pure HTML and CSS. It wasn’t highly responsive,
+                  nor was the design fully mine, but completing it was a
+                  milestone that meant everything. It marked the moment I proved
+                  to myself that I could build and launch something on my own.
+                  More than just a project, it was the spark that ignited my
+                  interest in frontend development. Despite its simplicity, it
+                  gave me the confidence and clarity to pursue design and web
+                  development seriously — setting the foundation for everything
+                  I’ve built since.
+                </h6>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <button class="cursor-pointer">
+                    <a
+                      href="https://github.com/divyamsingh007/Portfolio_01"
+                      target="_blank"
+                      ><h6
+                        class="italic font-bold pl-6 sm:pl-6 md:pl-10 lg:pl-12 xl:pl-24 pr-2 bg-gradient-to-r from-[#3C2A4D] to-[#574F7D] sm:text-left text-[#E0F0EA] text-[clamp(1.5rem,1.8vw,1.78rem)] !leading-tight hover:text-white hover:pr-4 hover:tracking-wider transition-all duration-300"
+                      >
+                        Repository<i
+                          class="fas fa-code-branch fa-2xs mx-4"
+                        ></i></h6
+                    ></a>
+                  </button>
+                  <button class="cursor-pointer">
+                    <a
+                      href="https://divyamsingh007.github.io/Portfolio_01/"
+                      target="_blank"
+                      ><h6
+                        class="italic font-bold pl-6 sm:pl-6 md:pl-10 lg:pl-12 xl:pl-24 bg-gradient-to-r from-[#3C2A4D] to-[#574F7D] sm:!text-left text-[#E0F0EA] text-[clamp(1.5rem,1.8vw,1.78rem)] !leading-tight hover:text-white hover:pr-4 hover:tracking-wider transition-all duration-300"
+                      >
+                        Live<i
+                          class="fa-solid fa-up-right-from-square fa-2xs mx-4"
+                        ></i></h6
+                    ></a>
                   </button>
                 </div>
               </div>
