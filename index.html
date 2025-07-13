@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
   </head>
-  <body class="">
+  <body class="bg-[#E0F0EA]">
     <div
       class="in-page-nav fixed z-50 bg-[#443C66]/60 backdrop-blur-md border border-white/5 hidden w-[clamp(60px,6vw,72px)] h-[498px] sm:top-[196px] sm:left-[96px] md:top-[200px] md:left-[30px] lg:top-[208px] lg:left-[60px] xl:top-[196px] xl:left-[108px] md:flex flex-col items-center justify-evenly text-[#E0F0EA] text-xl rounded-2xl shadow-xl border-r-4 border-r-white/10"
     >
@@ -107,60 +107,62 @@
     </div>
 
     <div class="hero-section" id="hero-section-id">
-      <nav
-        class="bg-[#2B1F39] border-b border-gray-200 text-[#E0F0EA] flex justify-between px-6 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-[9rem] py-2 sm:py-3 md:py-4 lg:py-[1rem]"
-      >
-        <div class="navbar-logo relative inline-block">
-          <h4
-            class="text-2xl font-extrabold bg-gradient-to-r from-[#E0F0EA] via-gray-300 to-white bg-[length:200%_auto] bg-clip-text text-transparent animate-shine"
-          >
-            PORTF.
-          </h4>
-        </div>
-        <div class="navbar-items hidden sm:block">
-          <ul class="flex gap-[clamp(1rem,4vw,4rem)]">
-            <li class="relative hover:text-white">
-              <a href="index.html"
-                ><h6
-                  class="text-[clamp(1rem,1.6vw,1.78rem)] transition-all hover:-translate-y-0.5"
-                >
-                  Portfolio
-                </h6></a
-              >
-              <div
-                class="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-0.5 bg-white rounded-t-md"
-              ></div>
-            </li>
-            <li>
-              <span href=""
-                ><h6
-                  class="text-[clamp(1rem,1.6vw,1.78rem)] opacity-60 cursor-crosshair hover:opacity-75 transition-all hover:-translate-y-0.5"
-                >
-                  Blog
-                </h6></span
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="navbar-btn-section flex items-center">
-          <a
-            href="Assets/DivyamSinghDuhoonResume.pdf"
-            target="_blank"
-            class="group"
-          >
-            <h6
-              class="italic font-bold pl-6 sm:pl-6 md:pl-10 lg:pl-12 xl:pl-24 pr-2 bg-gradient-to-r from-[#2B1F39] to-[#E0F0EA] text-left text-[#2B2A28] text-[clamp(1.5rem,1.8vw,1.78rem)] !leading-tight hover:text-white hover:pr-4 hover:tracking-wider transition-all duration-300 rounded-full"
+      <div class="flex justify-center">
+        <nav
+          class="bg-[#2B1F39] w-[100%] md:w-[95%] md:rounded-b-full border-b border-gray-200 text-[#E0F0EA] flex justify-between px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 2xl:px-[6.6rem] py-2 sm:py-3 md:py-4 lg:py-[1rem]"
+        >
+          <div class="navbar-logo relative inline-block">
+            <h4
+              class="text-2xl font-extrabold bg-gradient-to-r from-[#E0F0EA] via-gray-300 to-white bg-[length:200%_auto] bg-clip-text text-transparent animate-shine"
             >
-              RESUME
-              <span
-                class="inline-block opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ml-1"
+              PORTF.
+            </h4>
+          </div>
+          <div class="navbar-items hidden sm:block">
+            <ul class="flex gap-[clamp(1rem,4vw,4rem)]">
+              <li class="relative hover:text-white">
+                <a href="index.html"
+                  ><h6
+                    class="text-[clamp(1rem,1.6vw,1.78rem)] transition-all hover:-translate-y-0.5"
+                  >
+                    Portfolio
+                  </h6></a
+                >
+                <div
+                  class="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-0.5 bg-white rounded-t-md"
+                ></div>
+              </li>
+              <li>
+                <span href=""
+                  ><h6
+                    class="text-[clamp(1rem,1.6vw,1.78rem)] opacity-60 cursor-crosshair hover:opacity-75 transition-all hover:-translate-y-0.5"
+                  >
+                    Blog
+                  </h6></span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-btn-section flex items-center">
+            <a
+              href="Assets/DivyamSinghDuhoonResume.pdf"
+              target="_blank"
+              class="group"
+            >
+              <h6
+                class="italic font-bold pl-6 sm:pl-6 md:pl-10 lg:pl-12 xl:pl-24 pr-2 bg-gradient-to-r from-[#2B1F39] to-[#E0F0EA] text-left text-[#2B2A28] text-[clamp(1.5rem,1.8vw,1.78rem)] !leading-tight hover:text-white hover:pr-4 hover:tracking-wider transition-all duration-300 rounded-full"
               >
-                <i class="fa-solid fa-arrow-right fa-beat"></i>
-              </span>
-            </h6>
-          </a>
-        </div>
-      </nav>
+                RESUME
+                <span
+                  class="inline-block opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ml-1"
+                >
+                  <i class="fa-solid fa-arrow-right fa-beat"></i>
+                </span>
+              </h6>
+            </a>
+          </div>
+        </nav>
+      </div>
       <div
         class="hero-section-head bg-[#2B1F39] px-6 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-[9rem] pt-6 md:pt-10 lg:pt-20 pb-8 md:pb-12 lg:pb-[104px]"
       >
