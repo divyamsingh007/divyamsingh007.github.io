@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -68,7 +68,7 @@ p {
 
 .social-media a {
   display: flex;
-  background: #E0F0EA;
+  background: #e0f0ea;
   height: 50px;
   width: 50px;
   margin: 0 10px;
@@ -119,7 +119,7 @@ p {
   color: #3b5998;
 }
 .social-media a:hover .fa-envelope {
-  color: #CC3A2E;
+  color: #cc3a2e;
 }
 
 /* Cursor Dot */
@@ -129,7 +129,7 @@ p {
   left: 0;
   width: 24px;
   height: 24px;
-  background-color: #ffff;
+  background-color: #fff;
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
@@ -155,3 +155,44 @@ p {
     transform: scale(0.5);
   }
 } */
+ 
+/* Custom ScrollBar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e0f0ea;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b1f39;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #2b1f39, 0 0 16px #e0f0ea;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(224, 240, 234, 0.8) 50%,
+    transparent 100%
+  );
+  background-size: 100% 200%;
+  animation: neonFlow 2s linear infinite;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: 0 0 12px #e0f0ea, 0 0 24px #2b1f39;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2b1f39 #e0f0ea;
+}
+
+@keyframes neonFlow {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 200%;
+  }
+}
