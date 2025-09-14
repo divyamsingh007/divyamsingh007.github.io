@@ -155,7 +155,7 @@ p {
     transform: scale(0.5);
   }
 } */
- 
+
 /* Custom ScrollBar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -195,4 +195,18 @@ p {
   100% {
     background-position: 0% 200%;
   }
+}
+
+/* Logo Box Transitions */
+.logo-box {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center;
+  will-change: transform, box-shadow;
+}
+
+.logo-box:hover {
+  transform: translateY(-6px) scale(1.05) rotateY(5deg);
+  box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.15),
+    0 8px 16px -4px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  filter: brightness(1.05);
 }
